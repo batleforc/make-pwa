@@ -36,7 +36,8 @@ module.exports = ({mode,presets}) =>{
                 patterns:[
                     { from: 'src/media', to: 'media/' }, 
                     'src/manifest.json',
-                    {from: 'src/Notif.js', to:'Notif.js'}
+                    {from: 'src/Notif.js', to:'Notif.js'},
+                    {from:'src/Rapp', to:'Rapp/'}
                 ]
             })
         ]
