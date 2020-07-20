@@ -1,10 +1,10 @@
 const vapipublic="BOlh24I5TR7jPJJUNHT7UAG7oZr90fjAB8OGuPVvHhDC21VBfwypluguEysXpCuEK-paELmJFO1OXGM5raboQl8";
 async function requestPermission(registration) {
-   registration.pushManager.
-   subscribe({
+  registration.pushManager.getSubscription()
+  .then(function(subscription){
+    if(!subscription){
+      registration.pushManager.subscribe({
      userVisibleOnly: true,
-     // The `urlBase64ToUint8Array()` function is the same as in
-     // https://www.npmjs.com/package/web-pus#using-vapid-key-for-applicationserverkey
      applicationServerKey: urlBase64ToUint8Array(vapipublic)
    }).then((test)=>{
        console.log("Push notification subscribe");
@@ -17,6 +17,9 @@ async function requestPermission(registration) {
              console.log("Push send" + test2)
          })
    })
+    }
+  })
+   
 }
 function urlBase64ToUint8Array(base64String) {
     var padding = '='.repeat((4 - base64String.length % 4) % 4);
