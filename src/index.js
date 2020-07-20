@@ -1,4 +1,4 @@
-import './styles.css';  
+import './styles/styles.css';  
 import './Rapp/RApp';
 import './Notif';
 
