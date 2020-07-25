@@ -19,4 +19,4 @@ EXPOSE ${PORT}
 
 RUN npm run prod
 
-CMD ["node","API/index.js"]
+CMD ["node","Api/index.js"]

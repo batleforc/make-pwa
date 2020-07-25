@@ -9,7 +9,7 @@
     "prod": "npm run webpack -- --env.mode production --env.presets serviceworker",
     "dev": "npm run webpack-dev-server -- --env.mode development --hot",
     "dev:sw": "npm run webpack-dev-server -- --env.mode development  --env.presets serviceworker",
-    "push": "node webpush/index.js"
+    "push": "node Api/index.js"
   },
   "keywords": [],
   "author": "",
